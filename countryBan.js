@@ -19,7 +19,7 @@ mp.events.add('playerJoin', player => {
         allowed = false; 
     }
     if(!allowed) {
+        console.log(`[CountryBan Check]: Player: ${player.ip} (${countryID}) can not join due to regional restrictions.`);
         player.kick('!');
-    }
-    console.log(`[CountryBan Check]: Player: ${player.ip} (${countryID}) can not join due to regional restrictions.`);
+    } 
 });
